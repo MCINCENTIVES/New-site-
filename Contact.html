@@ -138,7 +138,7 @@ class Component extends DCLogic {
   state = { name:'', company:'', email:'', phone:'', size:'8–20 employees', message:'', submitted:false, tried:false };
   set(k){ return (e)=>this.setState({[k]: e.target.value}); }
   valid(){ const s=this.state; return s.name.trim() && s.company.trim() && /.+@.+\..+/.test(s.email) && s.message.trim(); }
-  submit(){ this.setState({tried:true}); if(this.valid()) this.setState({submitted:true}); }
+  submit(){ this.setState({tried:true}); if(!this.valid()) return; const s=this.state; fetch('https://formspree.io/f/xjgdqvqv',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:s.name,company:s.company,email:s.email,phone:s.phone,size:s.size,message:s.message})}).catch(()=>{}); this.setState({submitted:true}); }
   renderVals(){
     const s=this.state; const bad=s.tried && !this.valid();
     const eb=(ok)=> (s.tried && !ok) ? '#e0a3a0' : 'rgba(11,13,18,0.14)';

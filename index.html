@@ -1100,7 +1100,7 @@ class Component extends DCLogic {
       if(!email || !msg) return;
       const subject = encodeURIComponent('Website enquiry'+(name?(' from '+name):''));
       const body = encodeURIComponent('Name: '+(name||'\u2014')+'\nEmail: '+email+'\n\nQuestion:\n'+msg);
-      try { const a=document.createElement('a'); a.href='mailto:'+ownerEmail+'?subject='+subject+'&body='+body; a.target='_blank'; a.rel='noopener'; document.body.appendChild(a); a.click(); a.remove(); } catch(e){}
+      fetch('https://formspree.io/f/xeewbqbl',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,message:msg})}).catch(()=>{});
       this.setState(x=>({
         chat:[...x.chat,{from:'bot',text:'Thanks'+(name?(' '+name):'')+' \u2014 your question has been sent to the team. We\u2019ll reply to '+email+' within 4 hours.'}],
         inqOpen:false, inqName:'', inqEmail:'', inqMsg:'',
