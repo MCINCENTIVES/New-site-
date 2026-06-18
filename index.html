@@ -1098,9 +1098,7 @@ class Component extends DCLogic {
     const submitInquiry = ()=>{
       const name=String(s.inqName||'').trim(), email=String(s.inqEmail||'').trim(), msg=String(s.inqMsg||'').trim();
       if(!email || !msg) return;
-      const subject = encodeURIComponent('Website enquiry'+(name?(' from '+name):''));
-      const body = encodeURIComponent('Name: '+(name||'\u2014')+'\nEmail: '+email+'\n\nQuestion:\n'+msg);
-      fetch('https://formspree.io/f/xeewbqbl',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,message:msg})}).catch(()=>{});
+      fetch('https://formspree.io/f/xeewbqbl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,message:msg})}).catch(()=>{});
       this.setState(x=>({
         chat:[...x.chat,{from:'bot',text:'Thanks'+(name?(' '+name):'')+' \u2014 your question has been sent to the team. We\u2019ll reply to '+email+' within 4 hours.'}],
         inqOpen:false, inqName:'', inqEmail:'', inqMsg:'',
