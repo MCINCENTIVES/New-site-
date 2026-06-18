@@ -175,7 +175,7 @@ class Component extends DCLogic {
       days, times,
       name:s.name, email:s.email, company:s.company,
       setName:this.set('name'), setEmail:this.set('email'), setCompany:this.set('company'),
-      submit:()=>{ this.setState({tried:true}); if(this.valid()) this.setState({booked:true}); },
+      submit:()=>{ this.setState({tried:true}); if(!this.valid()) return; const s=this.state; fetch('https://formspree.io/f/xlgkyeyb',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:s.name,email:s.email,company:s.company,session:summary})}).catch(()=>{}); this.setState({booked:true}); },
       showError: s.tried && !this.valid(),
       nameBorder:eb(!!s.name.trim()), emailBorder:eb(/.+@.+\..+/.test(s.email)), companyBorder:eb(!!s.company.trim()),
       summary,
