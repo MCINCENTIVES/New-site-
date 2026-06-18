@@ -29,7 +29,11 @@
   .mqfw > div{ position:static !important; transform:none !important; width:100% !important; margin:0 0 12px !important; }
   .mqfw-deco{ display:none !important; }
   .mqfw-center{ height:auto !important; border-radius:18px !important; padding:22px !important; }
+  .mq-grid-2{ grid-template-columns:repeat(2,1fr) !important; }
+  .mq-grid-5{ grid-template-columns:repeat(5,1fr) !important; }
 }
+html,body{ overflow-x:hidden; }
+*{ overflow-wrap:break-word; }
 </style>
 <script>(function(){function init(){var header=document.querySelector("header");if(!header)return false;var nav=header.querySelector("nav");if(!nav)return false;if(header.querySelector(".mqnav-btn"))return true;var pill=nav.parentElement;var links=[].slice.call(nav.querySelectorAll("a")).map(function(a){return [a.getAttribute("href"),a.textContent];});var cta=pill.querySelector('a[href*="ook-a"]')||pill.querySelector('a[href*="ook a"]');var btn=document.createElement("button");btn.className="mqnav-btn";btn.setAttribute("aria-label","Menu");btn.innerHTML="<span></span><span></span><span></span>";var menu=document.createElement("div");menu.className="mqnav-menu";links.forEach(function(l){var a=document.createElement("a");a.href=l[0];a.textContent=l[1];menu.appendChild(a);});if(cta){if(cta.parentElement&&cta.parentElement!==pill)cta.parentElement.classList.add("mqcta");var c=document.createElement("a");c.href=cta.getAttribute("href");c.textContent=cta.textContent.trim();c.style.color="#0B8F4D";menu.appendChild(c);}btn.addEventListener("click",function(e){e.stopPropagation();menu.classList.toggle("open");btn.classList.toggle("open");});document.addEventListener("click",function(){menu.classList.remove("open");btn.classList.remove("open");});menu.addEventListener("click",function(e){e.stopPropagation();});pill.appendChild(btn);header.appendChild(menu);return true;}var t=0,iv=setInterval(function(){if(init()||t++>60)clearInterval(iv);},150);if(document.readyState!=="loading")init();else document.addEventListener("DOMContentLoaded",init);})();</script>
 </head>
@@ -98,7 +102,7 @@
       <sc-if value="{{ notBooked }}" hint-placeholder-val="{{ true }}">
         <div>
           <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;color:#fff;margin-bottom:14px">1 · Choose a day</div>
-          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:26px">
+          <div class="mq-grid-5" style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:26px">
             <sc-for list="{{ days }}" as="d" hint-placeholder-count="5">
               <button onClick="{{ d.pick }}" style="display:flex;flex-direction:column;align-items:center;gap:3px;padding:12px 4px;border-radius:12px;cursor:pointer;border:1px solid {{ d.border }};background:{{ d.bg }}">
                 <span style="font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:{{ d.sub }}">{{ d.dow }}</span>
@@ -109,7 +113,7 @@
           </div>
 
           <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;color:#fff;margin-bottom:14px">2 · Choose a time <span style="font-weight:400;color:rgba(255,255,255,0.4);font-family:'Hanken Grotesk'">(AEST)</span></div>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:26px">
+          <div class="mq-grid-2" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:26px">
             <sc-for list="{{ times }}" as="t" hint-placeholder-count="8">
               <button onClick="{{ t.pick }}" style="padding:11px 4px;border-radius:10px;cursor:pointer;font-family:'Space Mono',monospace;font-size:13px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
             </sc-for>
