@@ -1041,8 +1041,8 @@ class Component extends DCLogic {
       {label:'What do you do?', answer:'We help businesses build reward, recognition and client-relationship programs that retain key people and strengthen client relationships \u2014 starting with a Reward & Relationship Audit.'},
       {label:'What does it cost?', answer:'The audit is $3,000 + GST and is credited toward your first rollout. Implementation starts from $12,000 + GST, scoped to your team and goals.'},
       {label:'How does it work?', answer:'We Diagnose \u2192 Prioritise \u2192 Design \u2192 Deliver \u2192 Optimise. You get a scorecard, an opportunity map and a practical 12-month roadmap.'},
-      {label:'Speak to the team', answer:'Of course \u2014 tap \u201cMessage the team on WhatsApp\u201d below and we\u2019ll reply straight to your phone, or leave your number here and we\u2019ll call you.'},
-    ].map(c=>({ label:c.label, pick:()=>this.setState(x=>({chat:[...x.chat,{from:'user',text:c.label},{from:'bot',text:c.answer}]})) }));
+      {label:'Speak to the team', answer:'Sure \u2014 leave your name, email and message below and we\u2019ll get back to you within one business day.'},
+    ].map(c=>({ label:c.label, pick:()=>this.setState(x=>({chat:[...x.chat,{from:'user',text:c.label},{from:'bot',text:c.answer}], inqOpen: c.label==='Speak to the team' ? true : x.inqOpen})) }));
     const chatMsgs = s.chat.map(m=>{
       const u = m.from==='user';
       return {
