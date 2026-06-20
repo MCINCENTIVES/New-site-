@@ -6,7 +6,7 @@
 <script src="./support.js"></script>
 <style>
 .mqnav-btn{ display:none; flex-direction:column; justify-content:center; gap:5px; width:42px; height:42px; border:none; background:transparent; cursor:pointer; padding:0; }
-.mqnav-btn span{ display:block; width:22px; height:2px; background:#1D252D; border-radius:2px; transition:.2s; margin:0 auto; }
+.mqnav-btn span{ display:block; width:22px; height:2px; background:#231F20; border-radius:2px; transition:.2s; margin:0 auto; }
 .mqnav-btn.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
 .mqnav-btn.open span:nth-child(2){ opacity:0; }
 .mqnav-btn.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
@@ -163,10 +163,10 @@ html,body{ overflow-x:hidden; }
 
 <div style="background:#F5F3EE">
 
-<header style="position:absolute;top:0;left:0;right:0;z-index:60;background:transparent">
+<header style="position:relative;z-index:60;background:#ffffff;border-bottom:1px solid rgba(35,31,32,0.08)">
   <div style="max-width:1200px;margin:0 auto;padding:14px 24px">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0">
-    <a href="index.html" style="display:flex;align-items:center;gap:10px"><img src="logo-white.png" alt="MC Incentives" style="height:30px;width:auto;display:block" onerror="this.style.display='none'"></a>
+    <a href="index.html" style="display:flex;align-items:center;gap:10px"><img src="logo.png" alt="MC Incentives" style="height:30px;width:auto;display:block" onerror="this.style.display='none'"></a>
     <nav style="display:flex;align-items:center;gap:26px">
       <a href="index.html#what" style="font-size:14.5px;font-weight:600;color:rgba(255,255,255,0.85)" style-hover="color:#ffffff">What we do</a>
       <a href="index.html#process" style="font-size:14.5px;font-weight:600;color:rgba(255,255,255,0.85)" style-hover="color:#ffffff">Process</a>
@@ -182,42 +182,57 @@ html,body{ overflow-x:hidden; }
   </div>
 </header>
 
-<section style="position:relative;min-height:680px;display:flex;align-items:center;overflow:hidden;background:#0a1a10">
+<section style="background:#ffffff;padding:0">
 
-  <!-- Full-bleed background image -->
-  <img src="ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block">
+  <!-- Text row: headline left, body+CTA right -->
+  <div style="max-width:1400px;margin:0 auto;padding:48px 60px 36px;display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap">
 
-  <!-- Dark overlay for text legibility -->
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(5,15,10,0.78) 0%,rgba(5,15,10,0.55) 55%,rgba(5,15,10,0.25) 100%)"></div>
-
-  <!-- Content -->
-  <div style="position:relative;z-index:1;width:100%;max-width:1180px;margin:0 auto;padding:120px 60px 80px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap">
-
-    <!-- Left: eyebrow + headline + CTAs -->
-    <div style="max-width:640px">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:24px">
-        <span style="width:6px;height:6px;border-radius:50%;background:#B4D9F3;flex:none"></span>
-        <span style="font-family:'Albert Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;color:rgba(255,255,255,0.75);text-transform:uppercase">Strategic Reward Consultancy</span>
-      </div>
-      <h1 style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(44px,5.5vw,82px);line-height:0.93;letter-spacing:-0.04em;color:#ffffff;margin:0 0 32px">Reward programs<br>your people<br>actually value</h1>
-      <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <a href="Book-a-Call.html" style="display:inline-flex;align-items:center;gap:8px;background:#034938;color:#F2EDE4;font-family:'Albert Sans',sans-serif;font-weight:700;font-size:14px;padding:14px 28px;border-radius:999px;text-decoration:none">Book a strategy session <span style="background:#F2EDE4;color:#034938;border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:13px">&#x2192;</span></a>
-        <a href="Packages.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.4);color:#ffffff;font-family:'Albert Sans',sans-serif;font-weight:600;font-size:14px;padding:14px 28px;border-radius:999px;text-decoration:none">See packages</a>
-      </div>
+    <!-- Left: big headline -->
+    <div style="flex:1;min-width:280px">
+      <h1 style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(44px,7vw,108px);line-height:0.92;letter-spacing:-0.04em;margin:0;text-transform:uppercase">
+        <span style="color:#231F20">Reward Programs </span><span style="color:rgba(35,31,32,0.22)">Your</span><br>
+        <span style="color:#231F20">People </span><span style="color:rgba(35,31,32,0.22)">Actually Value</span>
+      </h1>
     </div>
 
-    <!-- Right: stat cards -->
-    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
-      <div style="background:#ffffff;border-radius:18px;padding:22px 26px;min-width:165px;box-shadow:0 8px 40px rgba(0,0,0,0.35)">
-        <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:32px;color:#231F20;line-height:1;margin-bottom:7px">$3K</div>
-        <div style="font-family:'Albert Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;color:rgba(35,31,32,0.5);text-transform:uppercase;line-height:1.5">Audit starts from<br>$3,000 + GST</div>
-      </div>
-      <div style="background:#ffffff;border-radius:18px;padding:22px 26px;min-width:165px;box-shadow:0 8px 40px rgba(0,0,0,0.35)">
-        <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:32px;color:#231F20;line-height:1;margin-bottom:7px">100%</div>
-        <div style="font-family:'Albert Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;color:rgba(35,31,32,0.5);text-transform:uppercase;line-height:1.5">Audit fee credited<br>to your program</div>
-      </div>
+    <!-- Right: eyebrow + body + CTA -->
+    <div style="flex:0 0 320px;padding-top:8px">
+      <div style="font-family:'Albert Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;color:rgba(35,31,32,0.4);text-transform:uppercase;margin-bottom:16px">Strategic Reward Consultancy</div>
+      <p style="font-family:'Albert Sans',sans-serif;font-size:16px;font-weight:500;line-height:1.65;color:rgba(35,31,32,0.65);margin:0 0 28px">We build reward programs that retain your people, delight your clients and turn ad hoc spend into commercial advantage.</p>
+      <a href="Book-a-Call.html" style="display:inline-flex;align-items:center;gap:10px;font-family:'Albert Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.08em;color:#231F20;text-decoration:none;text-transform:uppercase">
+        <span style="width:34px;height:34px;border-radius:50%;background:#231F20;display:inline-flex;align-items:center;justify-content:center;flex:none">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </span>
+        Book a strategy session
+      </a>
     </div>
 
+  </div>
+
+  <!-- Image panel with inset card -->
+  <div style="max-width:1400px;margin:0 auto;padding:0 60px 64px;position:relative">
+    <div style="border-radius:20px;overflow:hidden;position:relative;height:clamp(320px,45vw,580px)">
+      <img src="ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg" alt="Aerial beach view" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block">
+
+      <!-- Inset stat card bottom-right -->
+      <div style="position:absolute;bottom:24px;right:24px;background:#ffffff;border-radius:16px;padding:20px 24px;min-width:240px;box-shadow:0 12px 40px rgba(0,0,0,0.18)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px">
+          <div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#231F20">Our Reach</div>
+          <a href="Packages.html" style="font-family:'Albert Sans',sans-serif;font-size:11px;font-weight:600;color:rgba(35,31,32,0.45);text-decoration:none;letter-spacing:0.06em">See packages ↗</a>
+        </div>
+        <div style="display:flex;gap:20px">
+          <div>
+            <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:28px;color:#231F20;line-height:1;margin-bottom:4px">$3K</div>
+            <div style="font-family:'Albert Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.08em;color:rgba(35,31,32,0.45);text-transform:uppercase;line-height:1.4">Audit<br>starts from</div>
+          </div>
+          <div style="width:1px;background:rgba(35,31,32,0.1)"></div>
+          <div>
+            <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:28px;color:#231F20;line-height:1;margin-bottom:4px">100%</div>
+            <div style="font-family:'Albert Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.08em;color:rgba(35,31,32,0.45);text-transform:uppercase;line-height:1.4">Fee credited<br>to program</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </section>
