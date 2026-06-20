@@ -47,7 +47,7 @@ html,body{ overflow-x:hidden; }
 <style>
   *{box-sizing:border-box}
   body{margin:0;font-family:'Hanken Grotesk',sans-serif;color:#231F20;background:#1D252D;-webkit-font-smoothing:antialiased}
-  ::selection{background:#930500;color:#ffffff}
+  ::selection{background:#B4D9F3;color:#231F20}
   a{text-decoration:none;color:inherit}
   input{font-family:'Hanken Grotesk',sans-serif}
   input::placeholder{color:rgba(35,31,32,0.6)}
@@ -130,7 +130,7 @@ html,body{ overflow-x:hidden; }
             <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
               <div style="font-size:13px;color:#ffb4ad;background:rgba(192,57,43,0.14);border:1px solid rgba(192,57,43,0.35);border-radius:10px;padding:10px 13px">Pick a day &amp; time and add your name, a valid email and company.</div>
             </sc-if>
-            <button onClick="{{ submit }}" style="background:#930500;color:#ffffff;font-family:'Open Sauce One',sans-serif;font-weight:600;font-size:16px;padding:15px;border-radius:999px;border:none;cursor:pointer;width:100%;margin-top:4px" style-hover="background:#930500">Request this session →</button>
+            <button onClick="{{ submit }}" style="background:#B4D9F3;color:#231F20;font-family:'Open Sauce One',sans-serif;font-weight:600;font-size:16px;padding:15px;border-radius:999px;border:none;cursor:pointer;width:100%;margin-top:4px" style-hover="background:#B4D9F3">Request this session →</button>
             <p style="margin:0;text-align:center;font-size:12px;color:rgba(35,31,32,0.6)">We'll confirm by email. Times shown are indicative.</p>
           </div>
         </div>
@@ -161,13 +161,13 @@ class Component extends DCLogic {
       {dow:'Thu',num:'26',mon:'Jun'},{dow:'Fri',num:'27',mon:'Jun'},
     ];
     const days=dayData.map((d,i)=>({ ...d, pick:()=>this.setState({day:i}),
-      bg: s.day===i?'#930500':'#ffffff',
-      border: s.day===i?'#930500':'rgba(35,31,32,0.15)',
+      bg: s.day===i?'#B4D9F3':'#ffffff',
+      border: s.day===i?'#B4D9F3':'rgba(35,31,32,0.15)',
       fg: '#ffffff', sub: s.day===i?'rgba(35,31,32,0.7)':'rgba(35,31,32,0.45)' }));
     const timeLabels=['9:00','9:30','10:00','11:00','13:00','14:00','15:30','16:00'];
     const times=timeLabels.map((label,i)=>({ label, pick:()=>this.setState({time:i}),
-      bg: s.time===i?'#930500':'#ffffff',
-      border: s.time===i?'#930500':'rgba(35,31,32,0.15)',
+      bg: s.time===i?'#B4D9F3':'#ffffff',
+      border: s.time===i?'#B4D9F3':'rgba(35,31,32,0.15)',
       fg: s.time===i?'#ffffff':'rgba(35,31,32,0.7)' }));
     const eb=(ok)=> (s.tried && !ok)?'#a8504c':'rgba(35,31,32,0.15)';
     const summary = (s.day!=null?dayData[s.day].dow+' '+dayData[s.day].num+' '+dayData[s.day].mon:'') + (s.time!=null?', '+timeLabels[s.time]+' AEST':'');
