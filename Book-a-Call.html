@@ -113,7 +113,7 @@ html,body{ overflow-x:hidden; }
             </sc-for>
           </div>
 
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:14px;color:#231F20;margin-bottom:14px">2 · Choose a time <span style="font-weight:400;color:rgba(35,31,32,0.6);font-family:'Albert Sans'">(AEST)</span></div>
+          <div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:14px;color:#231F20;margin-bottom:14px">2 · Choose a time <span style="font-weight:500;color:rgba(35,31,32,0.6);font-family:'Albert Sans'">(AEST)</span></div>
           <div class="mq-grid-2" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:26px">
             <sc-for list="{{ times }}" as="t" hint-placeholder-count="8">
               <button onClick="{{ t.pick }}" style="padding:11px 4px;border-radius:10px;cursor:pointer;font-family:'Albert Sans',sans-serif;font-size:13px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
