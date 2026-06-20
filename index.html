@@ -867,26 +867,35 @@ html,body{ overflow-x:hidden; }
   </div>
   <script>
     (function(){
-      function initIndAnim(){
-        var cards = document.querySelectorAll('#ind-grid .ind-card');
-        if(!cards.length) return;
-        var obs = new IntersectionObserver(function(entries){
+      function attachObs(){
+        var grid = document.getElementById('ind-grid');
+        if(!grid) return;
+        var cards = grid.querySelectorAll('.ind-card');
+        if(!cards.length) return false;
+        var io = new IntersectionObserver(function(entries){
           entries.forEach(function(e){
             if(e.isIntersecting){
               var el = e.target;
-              var idx = Array.prototype.indexOf.call(cards, el);
-              setTimeout(function(){ el.classList.add('visible'); }, idx * 80);
-              obs.unobserve(el);
+              var all = Array.prototype.slice.call(grid.querySelectorAll('.ind-card'));
+              var idx = all.indexOf(el);
+              setTimeout(function(){ el.classList.add('visible'); }, idx * 90);
+              io.unobserve(el);
             }
           });
-        },{threshold:0.12});
-        cards.forEach(function(c){ obs.observe(c); });
+        },{threshold:0.1});
+        cards.forEach(function(c){ io.observe(c); });
+        return true;
       }
-      if(document.readyState==='loading'){
-        document.addEventListener('DOMContentLoaded', initIndAnim);
-      } else {
-        setTimeout(initIndAnim, 100);
-      }
+      // Watch for sc-for to inject cards into the grid
+      var mo = new MutationObserver(function(){
+        if(attachObs()) mo.disconnect();
+      });
+      var grid = document.getElementById('ind-grid');
+      if(grid) mo.observe(grid, {childList:true, subtree:true});
+      // Also try immediately and after short delays
+      setTimeout(function(){ if(attachObs()) mo.disconnect(); }, 200);
+      setTimeout(function(){ if(attachObs()) mo.disconnect(); }, 800);
+      setTimeout(function(){ if(attachObs()) mo.disconnect(); }, 2000);
     })();
   </script>
 </section>
