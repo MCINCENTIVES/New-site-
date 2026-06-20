@@ -841,23 +841,54 @@ html,body{ overflow-x:hidden; }
 </section>
 
 <section style="background:#ffffff;padding:96px 0;border-top:1px solid rgba(35,31,32,0.1)">
+  <style>
+    .ind-card{opacity:0;transform:translateY(28px);transition:opacity 0.55s ease,transform 0.55s ease}
+    .ind-card.visible{opacity:1;transform:none}
+  </style>
   <div style="max-width:1180px;margin:0 auto;padding:0 24px">
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px">
-      <div style="max-width:620px">
-        <div style="font-family:'Albert Sans',sans-serif;font-size:12px;letter-spacing:0.16em;color:#231F20;text-transform:uppercase;margin-bottom:16px">Industries we serve</div>
-        <h2 style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:clamp(30px,3.4vw,44px);line-height:1.05;letter-spacing:-0.025em;margin:0;color:#231F20">Built for growing businesses that rely on strong teams and trusted relationships.</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:56px">
+      <div style="max-width:680px">
+        <div style="font-family:'Albert Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;color:rgba(35,31,32,0.45);text-transform:uppercase;margin-bottom:18px">Industries we serve</div>
+        <h2 style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(34px,4vw,58px);line-height:1.0;letter-spacing:-0.03em;margin:0;color:#231F20">Built for growing businesses that rely on strong teams and trusted relationships.</h2>
       </div>
-      <a href="Contact.html" style="font-family:'Albert Sans',sans-serif;font-weight:600;font-size:15px;color:#231F20">Not sure if you fit? Ask us →</a>
+      <a href="Contact.html" style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;text-decoration:none;white-space:nowrap">Not sure if you fit? Ask us →</a>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px">
+    <div id="ind-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
       <sc-for list="{{ industries }}" as="i" hint-placeholder-count="10">
-        <div style="display:flex;align-items:center;gap:18px;background:#EAF4FB;border:1px solid rgba(35,31,32,0.08);border-radius:14px;padding:20px 22px" style-hover="border-color:rgba(30,124,120,0.45)">
-          <span style="flex:none;width:8px;height:8px;border-radius:50%;background:#034938"></span>
-          <div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:16px;margin-bottom:3px">{{ i.t }}</div><p style="margin:0;font-size:14px;color:rgba(35,31,32,0.65)">{{ i.d }}</p></div>
+        <div class="ind-card" style="display:flex;align-items:flex-start;gap:16px;background:#EAF4FB;border:1.5px solid transparent;border-radius:16px;padding:22px 24px;cursor:default;transition:border-color 0.2s,opacity 0.55s ease,transform 0.55s ease" onMouseOver="this.style.borderColor='rgba(3,73,56,0.25)'" onMouseOut="this.style.borderColor='transparent'">
+          <span style="flex:none;width:9px;height:9px;border-radius:50%;background:#034938;margin-top:5px"></span>
+          <div>
+            <div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:16px;color:#231F20;margin-bottom:4px">{{ i.t }}</div>
+            <p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:14px;font-weight:500;line-height:1.55;color:rgba(35,31,32,0.6)">{{ i.d }}</p>
+          </div>
         </div>
       </sc-for>
     </div>
   </div>
+  <script>
+    (function(){
+      function initIndAnim(){
+        var cards = document.querySelectorAll('#ind-grid .ind-card');
+        if(!cards.length) return;
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if(e.isIntersecting){
+              var el = e.target;
+              var idx = Array.prototype.indexOf.call(cards, el);
+              setTimeout(function(){ el.classList.add('visible'); }, idx * 80);
+              obs.unobserve(el);
+            }
+          });
+        },{threshold:0.12});
+        cards.forEach(function(c){ obs.observe(c); });
+      }
+      if(document.readyState==='loading'){
+        document.addEventListener('DOMContentLoaded', initIndAnim);
+      } else {
+        setTimeout(initIndAnim, 100);
+      }
+    })();
+  </script>
 </section>
 
 <section id="calculator" style="background:#F2F2F2;padding:96px 0;position:relative;overflow:hidden">
