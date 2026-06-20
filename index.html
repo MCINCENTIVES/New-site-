@@ -292,10 +292,10 @@ html,body{ overflow-x:hidden; }
   </div>
 </div>
 
-<section id="what" style="background:#ffffff;padding:80px 0 80px">
+<section id="what" style="background:#ffffff;padding:80px 0 0">
 
   <!-- Header -->
-  <div style="max-width:1400px;margin:0 auto;padding:0 60px 56px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap">
+  <div style="max-width:1400px;margin:0 auto;padding:0 60px 48px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap">
     <div>
       <div style="font-family:'Albert Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;color:rgba(35,31,32,0.4);text-transform:uppercase;margin-bottom:16px">What we do</div>
       <h2 style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(28px,3.2vw,48px);line-height:1.02;letter-spacing:-0.03em;margin:0;color:#231F20">Practical reward, recognition<br>and relationship programs.</h2>
@@ -303,27 +303,76 @@ html,body{ overflow-x:hidden; }
     <p style="font-size:16px;font-weight:500;line-height:1.6;color:rgba(35,31,32,0.6);max-width:340px;margin:0">We help businesses move from ad hoc gestures to structured programs that retain key people and strengthen important relationships.</p>
   </div>
 
-  <!-- Image -->
-  <div style="position:relative;overflow:hidden">
-    <img src="ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg" alt="" style="width:100%;height:320px;object-fit:cover;object-position:center 40%;display:block">
-    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.5) 100%)"></div>
-  </div>
+  <!-- Scroll-driven horizontal carousel -->
+  <div id="what-scroll-outer" style="height:3200px;position:relative">
+    <div style="position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
 
-  <!-- Cards pulled up over image bottom -->
-  <div style="max-width:1400px;margin:-120px auto 0;padding:0 60px;position:relative;z-index:2">
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="mq-grid-2">
-      <div style="background:#231F20;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#ffffff;line-height:1;letter-spacing:-0.02em">№01</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#ffffff;line-height:1.25;margin-bottom:3px">Rewards & Recognition Audit</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(255,255,255,0.65)">Review what you currently do, what is working and where gaps exist.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№02</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Retention Risk Review</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Identify where key people may be under-recognised, disengaged or at risk of leaving.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№03</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Incentive Program Design</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Build practical incentive structures matched to your team, goals and budget.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№04</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Staff Recognition Programs</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Create consistent ways to recognise performance, loyalty and contribution.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№05</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Client Relationship Programs</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Design better touchpoints for key clients, partners and referrers.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№06</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Reward & Recognition Calendar</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Map out what to do, when to do it and who it should be designed for.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№07</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Competitor Benchmarking</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Compare your rewards, incentives and recognition activity against your industry.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№08</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Program Rollout Support</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Help launch new initiatives clearly across your team, clients or partners.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№09</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Internal Communications</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Create the messaging needed to help staff engage with each program.</p></div>
-      <div style="background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.13);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№10</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Events, Retreats &amp; Incentives</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Deliver the moments that bring your strategy to life — from team rewards to incentive travel.</p></div>
+      <!-- Background image -->
+      <div style="position:absolute;inset:0;z-index:0">
+        <img src="ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block">
+        <div style="position:absolute;inset:0;background:rgba(5,15,10,0.48)"></div>
+      </div>
+
+      <!-- Progress bar -->
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.15);z-index:10">
+        <div id="what-progress" style="height:100%;background:#B4D9F3;width:0%;transition:width 0.1s linear"></div>
+      </div>
+
+      <!-- Cards track -->
+      <div style="position:relative;z-index:2;padding:0 60px">
+        <div id="what-track" style="display:flex;gap:16px;will-change:transform;transition:transform 0.08s linear">
+          <div style="flex:0 0 320px;background:#231F20;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#ffffff;line-height:1;letter-spacing:-0.02em">№01</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#ffffff;line-height:1.25;margin-bottom:3px">Rewards & Recognition Audit</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(255,255,255,0.65)">Review what you currently do, what is working and where gaps exist.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№02</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Retention Risk Review</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Identify where key people may be under-recognised, disengaged or at risk of leaving.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№03</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Incentive Program Design</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Build practical incentive structures matched to your team, goals and budget.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№04</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Staff Recognition Programs</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Create consistent ways to recognise performance, loyalty and contribution.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№05</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Client Relationship Programs</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Design better touchpoints for key clients, partners and referrers.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№06</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Reward &amp; Recognition Calendar</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Map out what to do, when to do it and who it should be designed for.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№07</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Competitor Benchmarking</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Compare your rewards, incentives and recognition activity against your industry.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№08</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Program Rollout Support</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Help launch new initiatives clearly across your team, clients or partners.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№09</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Internal Communications</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Create the messaging needed to help staff engage with each program.</p></div>
+        <div style="flex:0 0 320px;background:#ffffff;border-radius:20px;padding:28px 26px 26px;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:flex;flex-direction:column;gap:10px"><div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:34px;color:#231F20;line-height:1;letter-spacing:-0.02em">№10</div><div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:15px;color:#231F20;line-height:1.25;margin-bottom:3px">Events, Retreats &amp; Incentives</div><p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">Deliver the moments that bring your strategy to life — from team rewards to incentive travel.</p></div>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div id="what-hint" style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;font-family:'Albert Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);z-index:10;transition:opacity 0.4s">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Scroll to explore
+      </div>
     </div>
   </div>
+
+  <script>
+  (function(){
+    var outer = document.getElementById('what-scroll-outer');
+    var track = document.getElementById('what-track');
+    var progress = document.getElementById('what-progress');
+    var hint = document.getElementById('what-hint');
+    if(!outer||!track) return;
+
+    function update(){
+      var rect = outer.getBoundingClientRect();
+      var outerH = outer.offsetHeight;
+      var vh = window.innerHeight;
+      // progress 0→1 as section scrolls
+      var scrolled = -rect.top;
+      var scrollable = outerH - vh;
+      var pct = Math.max(0, Math.min(1, scrolled / scrollable));
+
+      // total slide distance = track width - viewport width + padding
+      var trackW = track.scrollWidth;
+      var viewW = window.innerWidth - 120; // 60px padding each side
+      var maxSlide = Math.max(0, trackW - viewW);
+
+      track.style.transform = 'translateX(-' + (pct * maxSlide) + 'px)';
+      if(progress) progress.style.width = (pct * 100) + '%';
+      if(hint) hint.style.opacity = pct > 0.05 ? '0' : '1';
+    }
+
+    window.addEventListener('scroll', update, {passive:true});
+    update();
+  })();
+  </script>
 
 </section>
 
