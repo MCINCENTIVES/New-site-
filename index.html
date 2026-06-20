@@ -182,45 +182,44 @@ html,body{ overflow-x:hidden; }
   </div>
 </header>
 
-<section style="position:relative;height:80vh;max-height:720px;min-height:560px;overflow:hidden;background:#0a1a10">
+<section style="background:#0d1f15;min-height:600px;display:flex;align-items:stretch;overflow:hidden">
 
-  <!-- Full-bleed background image -->
-  <img src="hero6.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block">
+  <!-- Left: text content -->
+  <div style="flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;padding:120px 48px 60px 60px;position:relative;z-index:1">
 
-  <!-- Dark overlay — lighter so image stays crisp -->
-  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,10,0.75) 0%,rgba(5,15,10,0.22) 45%,rgba(5,15,10,0.04) 100%)"></div>
-
-  <!-- Oversized brand watermark -->
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(80px,14vw,200px);letter-spacing:-0.04em;color:rgba(255,255,255,0.08);pointer-events:none;user-select:none;line-height:1">MC INCENTIVES</div>
-
-  <!-- Content — vertically centred -->
-  <div style="position:absolute;top:50%;left:0;right:0;transform:translateY(-10%);padding:0 36px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
-
-    <!-- Left: eyebrow + headline + CTAs -->
-    <div style="max-width:620px">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px">
-        <span style="width:6px;height:6px;border-radius:50%;background:#B4D9F3;flex:none"></span>
-        <span style="font-family:'Albert Sans',sans-serif;font-size:11px;letter-spacing:0.16em;color:rgba(255,255,255,0.65);text-transform:uppercase">Strategic Reward Consultancy</span>
-      </div>
-      <h1 style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(38px,5.5vw,78px);line-height:0.95;letter-spacing:-0.04em;color:#ffffff;margin:0 0 28px">Reward programs<br>your people<br>actually value</h1>
-      <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <a href="Book-a-Call.html" style="display:inline-flex;align-items:center;gap:8px;background:#034938;color:#F2EDE4;font-family:'Albert Sans',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:999px;text-decoration:none">Book a strategy session <span style="background:#F2EDE4;color:#034938;border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:13px">&#x2192;</span></a>
-        <a href="Packages.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.45);color:#ffffff;font-family:'Albert Sans',sans-serif;font-weight:600;font-size:14px;padding:13px 28px;border-radius:999px;text-decoration:none">See packages</a>
-      </div>
+    <!-- Eyebrow -->
+    <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:24px">
+      <span style="width:6px;height:6px;border-radius:50%;background:#B4D9F3;flex:none"></span>
+      <span style="font-family:'Albert Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;color:rgba(255,255,255,0.55);text-transform:uppercase">Strategic Reward Consultancy</span>
     </div>
 
-    <!-- Right: stat cards — solid white like reference -->
-    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
-      <div style="background:#ffffff;border-radius:20px;padding:22px 26px;min-width:170px;box-shadow:0 8px 32px rgba(0,0,0,0.22)">
-        <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:32px;color:#231F20;line-height:1;margin-bottom:8px">$3K</div>
-        <div style="font-family:'Albert Sans',sans-serif;font-size:10px;letter-spacing:0.1em;color:rgba(35,31,32,0.55);text-transform:uppercase;line-height:1.5">Audit starts from<br>$3,000 + GST</div>
-      </div>
-      <div style="background:#ffffff;border-radius:20px;padding:22px 26px;min-width:170px;box-shadow:0 8px 32px rgba(0,0,0,0.22)">
-        <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:32px;color:#231F20;line-height:1;margin-bottom:8px">100%</div>
-        <div style="font-family:'Albert Sans',sans-serif;font-size:10px;letter-spacing:0.1em;color:rgba(35,31,32,0.55);text-transform:uppercase;line-height:1.5">Audit fee credited<br>to your program</div>
-      </div>
+    <!-- Headline -->
+    <h1 style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(42px,4.8vw,76px);line-height:0.95;letter-spacing:-0.04em;color:#ffffff;margin:0 0 32px">Reward programs<br>your people<br>actually value</h1>
+
+    <!-- CTAs -->
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:52px">
+      <a href="Book-a-Call.html" style="display:inline-flex;align-items:center;gap:8px;background:#034938;color:#F2EDE4;font-family:'Albert Sans',sans-serif;font-weight:700;font-size:14px;padding:14px 28px;border-radius:999px;text-decoration:none">Book a strategy session <span style="background:#F2EDE4;color:#034938;border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:13px">&#x2192;</span></a>
+      <a href="Packages.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-family:'Albert Sans',sans-serif;font-weight:600;font-size:14px;padding:14px 28px;border-radius:999px;text-decoration:none">See packages</a>
     </div>
 
+    <!-- Stat cards -->
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <div style="background:#ffffff;border-radius:18px;padding:20px 24px;min-width:160px;box-shadow:0 8px 32px rgba(0,0,0,0.25)">
+        <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:30px;color:#231F20;line-height:1;margin-bottom:6px">$3K</div>
+        <div style="font-family:'Albert Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;color:rgba(35,31,32,0.5);text-transform:uppercase;line-height:1.5">Audit starts from<br>$3,000 + GST</div>
+      </div>
+      <div style="background:#ffffff;border-radius:18px;padding:20px 24px;min-width:160px;box-shadow:0 8px 32px rgba(0,0,0,0.25)">
+        <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:30px;color:#231F20;line-height:1;margin-bottom:6px">100%</div>
+        <div style="font-family:'Albert Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;color:rgba(35,31,32,0.5);text-transform:uppercase;line-height:1.5">Audit fee credited<br>to your program</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: image panel — contained, no stretch blur -->
+  <div style="flex:0 0 45%;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#0d1f15">
+    <!-- subtle dark gradient on left edge to blend into text panel -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,#0d1f15 0%,transparent 18%);z-index:1;pointer-events:none"></div>
+    <img src="hero6.jpg" alt="Scenic landscape" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block">
   </div>
 
 </section>
