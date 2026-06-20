@@ -292,169 +292,43 @@ html,body{ overflow-x:hidden; }
   </div>
 </div>
 
-<section id="what" style="background:#f7f9fa;padding:96px 0;position:relative;overflow:hidden">
-  <!-- Background watermark -->
-  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
-    <div style="position:absolute;top:6%;right:-2%;font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(60px,9vw,140px);color:rgba(35,31,32,0.35);text-transform:uppercase;letter-spacing:0.04em;white-space:nowrap;animation:bgWordDrift 22s ease-in-out infinite">RECOGNITION</div>
-    <div style="position:absolute;bottom:4%;left:-1%;font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(50px,7vw,110px);color:rgba(35,31,32,0.35);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;animation:bgWordDrift 28s ease-in-out infinite reverse;animation-delay:-11s">PERFORMANCE</div>
-  </div>
-  <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 24px">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:56px">
-      <div style="max-width:620px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-          <span class="mstar" style="width:16px;height:16px;color:#231F20"><svg viewBox="0 0 100 100" fill="currentColor" width="16" height="16"><rect x="46" y="6" width="8" height="88" rx="4"/><rect x="46" y="6" width="8" height="88" rx="4" transform="rotate(45 50 50)"/><rect x="46" y="6" width="8" height="88" rx="4" transform="rotate(90 50 50)"/><rect x="46" y="6" width="8" height="88" rx="4" transform="rotate(135 50 50)"/></svg></span>
-          <span style="font-family:'Albert Sans',sans-serif;font-size:12px;letter-spacing:0.16em;color:#231F20;text-transform:uppercase">What we do</span>
-        </div>
-        <h2 style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(30px,3.4vw,48px);line-height:1.02;letter-spacing:-0.03em;margin:0;color:#231F20">Practical reward,<br>recognition and<br>relationship programs.</h2>
-      </div>
-      <p style="font-size:16px;line-height:1.6;color:#3D5A5E;max-width:360px;margin:0">We help businesses move from ad hoc gestures to structured programs that retain key people and strengthen important relationships.</p>
+<section id="what" style="background:#ffffff;padding:80px 0 0;position:relative;overflow:hidden">
+
+  <!-- Header -->
+  <div style="max-width:1400px;margin:0 auto;padding:0 60px 56px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap">
+    <div>
+      <div style="font-family:'Albert Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;color:rgba(35,31,32,0.4);text-transform:uppercase;margin-bottom:16px">What we do</div>
+      <h2 style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:clamp(28px,3.2vw,48px);line-height:1.02;letter-spacing:-0.03em;margin:0;color:#231F20">Practical reward, recognition<br>and relationship programs.</h2>
     </div>
+    <p style="font-size:16px;font-weight:500;line-height:1.6;color:rgba(35,31,32,0.6);max-width:340px;margin:0">We help businesses move from ad hoc gestures to structured programs that retain key people and strengthen important relationships.</p>
+  </div>
 
-    <!-- Service grid: colour-coded tiles -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px" class="mq-grid-2">
+  <!-- Cards over image -->
+  <div style="position:relative">
+    <img src="ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg" alt="" style="width:100%;height:420px;object-fit:cover;object-position:center 40%;display:block">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(255,255,255,0.15) 0%,rgba(5,15,10,0.55) 100%)"></div>
 
-      <!-- 01 Audit — Teal -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-top:3px solid #1E7C78;border-radius:20px;padding:28px;position:relative;overflow:hidden;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 24px -8px rgba(29,37,45,0.10)">
-        <div style="position:absolute;top:-24px;right:-24px;opacity:0.12;animation:starSpinReverse 35s linear infinite">
-          <svg viewBox="0 0 100 100" fill="#1E7C78" width="140" height="140"><rect x="46" y="3" width="8" height="94" rx="4"/><rect x="46" y="3" width="8" height="94" rx="4" transform="rotate(45 50 50)"/><rect x="46" y="3" width="8" height="94" rx="4" transform="rotate(90 50 50)"/><rect x="46" y="3" width="8" height="94" rx="4" transform="rotate(135 50 50)"/></svg>
-        </div>
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(111,169,200,0.18);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA9C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <!-- Cards row pinned to bottom of image -->
+    <div style="position:absolute;bottom:-60px;left:0;right:0;padding:0 60px">
+      <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="mq-grid-2">
+
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+          <div style="background:#ffffff;border-radius:20px;padding:28px 28px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.15);display:flex;flex-direction:column;justify-content:space-between;min-height:180px">
+            <div>
+              <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:42px;color:#231F20;line-height:1;margin-bottom:14px;letter-spacing:-0.03em">№{{ s.__index + 1 }}</div>
+              <div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:16px;color:#231F20;margin-bottom:6px;line-height:1.2">{{ s.t }}</div>
+              <p style="margin:0;font-family:'Albert Sans',sans-serif;font-size:13px;font-weight:500;line-height:1.5;color:rgba(35,31,32,0.6)">{{ s.d }}</p>
             </div>
-            <span style="font-family:'Albert Sans',sans-serif;font-size:11px;color:rgba(29,37,45,0.35);letter-spacing:0.12em">01</span>
           </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Rewards &amp; Recognition Audit</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Review what you currently do, what is working and where gaps exist.</p>
-        </div>
-        <div style="margin-top:20px;display:inline-flex;align-items:center;gap:6px;font-family:'Albert Sans',sans-serif;font-size:11px;color:#231F20;letter-spacing:0.08em">AUDIT<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </sc-for>
+
       </div>
-
-      <!-- 02 Retention — Dark olive -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-top:3px solid #0E5B4F;border-radius:20px;padding:28px;position:relative;overflow:hidden;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 24px -8px rgba(29,37,45,0.10)">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(61,227,137,0.14);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA9C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-            </div>
-            <span style="font-family:'Albert Sans',sans-serif;font-size:11px;color:rgba(29,37,45,0.35);letter-spacing:0.12em">02</span>
-          </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Retention Risk Review</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Identify where key people may be under-recognised, disengaged or at risk of leaving.</p>
-        </div>
-        <div style="margin-top:20px;display:inline-flex;align-items:center;gap:6px;font-family:'Albert Sans',sans-serif;font-size:11px;color:#231F20;letter-spacing:0.08em">RETAIN<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-
-      <!-- 03 Incentive Design — Gold -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-top:3px solid #B4D9F3;border-radius:20px;padding:28px;position:relative;overflow:hidden;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 24px -8px rgba(29,37,45,0.10)">
-        <div style="position:absolute;bottom:-20px;left:-20px;opacity:0.1;animation:starSpin 45s linear infinite">
-          <svg viewBox="0 0 100 100" fill="#5A9BB8" width="130" height="130"><rect x="46" y="3" width="8" height="94" rx="4"/><rect x="46" y="3" width="8" height="94" rx="4" transform="rotate(45 50 50)"/><rect x="46" y="3" width="8" height="94" rx="4" transform="rotate(90 50 50)"/><rect x="46" y="3" width="8" height="94" rx="4" transform="rotate(135 50 50)"/></svg>
-        </div>
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(111,169,200,0.2);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5A9BB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.6"/></svg>
-            </div>
-            <span style="font-family:'Albert Sans',sans-serif;font-size:11px;color:rgba(29,37,45,0.35);letter-spacing:0.12em">03</span>
-          </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Incentive Program Design</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Build practical incentive structures matched to your team, goals and budget.</p>
-        </div>
-        <div style="margin-top:20px;display:inline-flex;align-items:center;gap:6px;font-family:'Albert Sans',sans-serif;font-size:11px;color:#5A9BB8;letter-spacing:0.08em">DESIGN<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-
-      <!-- 04 Staff Recognition — Green accent stripe -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-top:3px solid #1E7C78;border-radius:20px;box-shadow:0 4px 24px -8px rgba(29,37,45,0.08);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(30,124,120,0.15);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E7C78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 22l5-3 5 3-1.5-9"/></svg>
-            </div>
-            <span style="font-family:'Albert Sans',sans-serif;font-size:11px;color:rgba(29,37,45,0.35);letter-spacing:0.12em">04</span>
-          </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Staff Recognition Programs</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Create consistent ways to recognise performance, loyalty and contribution.</p>
-        </div>
-        <div style="margin-top:16px;font-family:'Albert Sans',sans-serif;font-size:10px;letter-spacing:0.12em;color:rgba(111,169,200,0.7);text-transform:uppercase">RECOGNITION →</div>
-      </div>
-
-      <!-- 05 Client Relationships — Gold accent -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-top:3px solid #6FA9C8;border-radius:20px;box-shadow:0 4px 24px -8px rgba(29,37,45,0.08);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(111,169,200,0.15);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA9C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.5"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <span style="font-family:'Albert Sans',sans-serif;font-size:11px;color:rgba(29,37,45,0.35);letter-spacing:0.12em">05</span>
-          </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Client Relationship Programs</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Design better touchpoints for key clients, partners and referrers.</p>
-        </div>
-        <div style="margin-top:16px;font-family:'Albert Sans',sans-serif;font-size:10px;letter-spacing:0.12em;color:rgba(111,169,200,0.7);text-transform:uppercase">LOYALTY →</div>
-      </div>
-
-      <!-- 06 Reward Calendar — Teal accent -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-top:3px solid #145C52;border-radius:20px;box-shadow:0 4px 24px -8px rgba(29,37,45,0.08);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(26,112,96,0.2);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#145C52" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="17" rx="2"/><path d="M3 10h18M8 2.5v4M16 2.5v4"/></svg>
-            </div>
-            <span style="font-family:'Albert Sans',sans-serif;font-size:11px;color:rgba(29,37,45,0.35);letter-spacing:0.12em">06</span>
-          </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Reward &amp; Recognition Calendar</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Map out what to do, when to do it and who it should be designed for.</p>
-        </div>
-        <div style="margin-top:16px;font-family:'Albert Sans',sans-serif;font-size:10px;letter-spacing:0.12em;color:rgba(26,112,96,0.8);text-transform:uppercase">PLANNING →</div>
-      </div>
-
-      <!-- 07 Benchmarking — wide stat card -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-radius:20px;box-shadow:0 4px 24px -8px rgba(29,37,45,0.08);padding:28px;min-height:160px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(30,124,120,0.10);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA9C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7.5 17v-5M12 17V8M16.5 17v-8"/></svg>
-            </div>
-            <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:36px;color:rgba(29,37,45,0.06);letter-spacing:-0.04em">07</div>
-          </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Competitor Benchmarking</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Compare your rewards and recognition activity against your industry.</p>
-        </div>
-      </div>
-
-      <!-- 08 Program Rollout — wide -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-radius:20px;box-shadow:0 4px 24px -8px rgba(29,37,45,0.08);padding:28px;min-height:160px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(30,124,120,0.10);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA9C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/></svg>
-            </div>
-            <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:36px;color:rgba(29,37,45,0.06);letter-spacing:-0.04em">08</div>
-          </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Program Rollout Support</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Help launch new initiatives clearly across your team, clients or partners.</p>
-        </div>
-      </div>
-
-      <!-- 09 Internal Comms — green gradient mini -->
-      <div style="background:#fff;border:1px solid rgba(29,37,45,0.10);border-top:3px solid #1E7C78;border-radius:20px;box-shadow:0 4px 24px -8px rgba(29,37,45,0.08);padding:28px;min-height:160px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
-            <div style="width:48px;height:48px;border-radius:14px;background:rgba(30,124,120,0.12);display:flex;align-items:center;justify-content:center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E7C78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 15-4v10L3 13v-2Z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/><path d="M18 8a3 3 0 0 1 0 6"/></svg>
-            </div>
-            <div style="font-family:'Albert Sans',sans-serif;font-weight:900;font-size:36px;color:rgba(35,31,32,0.55);letter-spacing:-0.04em">09</div>
-          </div>
-          <div style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:18px;color:#1D252D;line-height:1.2;margin-bottom:8px">Internal Communications</div>
-          <p style="margin:0;font-size:14px;line-height:1.55;color:#3D5A5E">Create the messaging needed to help staff engage with each program.</p>
-        </div>
-      </div>
-
-      
-
     </div>
   </div>
+
+  <!-- Spacer for cards that extend below image -->
+  <div style="height:200px;background:#ffffff"></div>
+
 </section>
 
 
