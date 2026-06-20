@@ -11,7 +11,7 @@
 .mqnav-btn.open span:nth-child(2){ opacity:0; }
 .mqnav-btn.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 .mqnav-menu{ display:none; position:fixed; top:80px; left:16px; right:16px; background:#fff; border:1px solid rgba(35,31,32,0.1); border-radius:16px; box-shadow:0 24px 54px -18px rgba(29,37,45,0.4); padding:8px; z-index:200; }
-.mqnav-menu a{ display:block; padding:13px 16px; font-family:'Open Sauce One',sans-serif; font-weight:600; font-size:16px; color:#1D252D; border-radius:10px; text-decoration:none; }
+.mqnav-menu a{ display:block; padding:13px 16px; font-family:'Albert Sans',sans-serif; font-weight:600; font-size:16px; color:#1D252D; border-radius:10px; text-decoration:none; }
 @media (max-width:820px){
   nav{ display:none !important; }
   header > div > div{ gap:10px !important; padding:8px 10px 8px 18px !important; }
@@ -43,13 +43,13 @@ html,body{ overflow-x:hidden; }
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Open+Sauce+One:wght@400;700;900&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
-  body{margin:0;font-family:'Hanken Grotesk',sans-serif;color:#231F20;background:#1D252D;-webkit-font-smoothing:antialiased}
+  body{margin:0;font-family:'Albert Sans',sans-serif;color:#231F20;background:#1D252D;-webkit-font-smoothing:antialiased}
   ::selection{background:#B4D9F3;color:#231F20}
   a{text-decoration:none;color:inherit}
-  input{font-family:'Hanken Grotesk',sans-serif}
+  input{font-family:'Albert Sans',sans-serif}
   input::placeholder{color:rgba(35,31,32,0.6)}
   h1,h2{text-transform:uppercase}
 </style>
@@ -69,7 +69,7 @@ html,body{ overflow-x:hidden; }
       <a href="Blog.html" style="font-size:14.5px;font-weight:500;color:rgba(35,31,32,0.65)" style-hover="color:#1D252D">Blog</a>
       <a href="Contact.html" style="font-size:14.5px;font-weight:500;color:rgba(35,31,32,0.65)" style-hover="color:#1D252D">Contact</a>
     </nav>
-    <span style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(35,31,32,0.6)">Private strategy session</span>
+    <span style="font-family:'Albert Sans',sans-serif;font-size:12px;color:rgba(35,31,32,0.6)">Private strategy session</span>
   </div>
   </div>
 </header>
@@ -80,8 +80,8 @@ html,body{ overflow-x:hidden; }
   <div style="position:relative;max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:0.92fr 1.08fr;gap:48px;align-items:start">
 
     <div style="position:sticky;top:96px">
-      <div style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.16em;color:#231F20;text-transform:uppercase;margin-bottom:20px">Book a call</div>
-      <h1 style="font-family:'Open Sauce One',sans-serif;font-weight:800;font-size:clamp(30px,3.6vw,46px);line-height:1.04;letter-spacing:-0.03em;color:#231F20;margin:0 0 16px">Apply for a private strategy session.</h1>
+      <div style="font-family:'Albert Sans',sans-serif;font-size:12px;letter-spacing:0.16em;color:#231F20;text-transform:uppercase;margin-bottom:20px">Book a call</div>
+      <h1 style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:clamp(30px,3.6vw,46px);line-height:1.04;letter-spacing:-0.03em;color:#231F20;margin:0 0 16px">Apply for a private strategy session.</h1>
       <p style="font-size:17px;line-height:1.6;color:rgba(35,31,32,0.65);margin:0 0 30px">A focused 30-minute call to understand what you're trying to improve and confirm whether the Reward &amp; Relationship Audit is the right fit for your business.</p>
       <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:30px">
         <div style="display:flex;gap:14px;align-items:flex-start"><span style="flex:none;width:26px;height:26px;border-radius:7px;background:rgba(30,124,120,0.18);color:#231F20;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">1</span><div><div style="color:#231F20;font-weight:600;font-size:15px;margin-bottom:2px">Where you are now</div><div style="font-size:14px;color:rgba(35,31,32,0.65);line-height:1.5">How you currently reward, recognise and retain staff and clients.</div></div></div>
@@ -95,32 +95,32 @@ html,body{ overflow-x:hidden; }
       <sc-if value="{{ booked }}" hint-placeholder-val="{{ false }}">
         <div style="text-align:center;padding:36px 8px">
           <div style="width:62px;height:62px;border-radius:50%;background:rgba(30,124,120,0.18);color:#231F20;display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 20px">✓</div>
-          <h2 style="font-family:'Open Sauce One',sans-serif;font-weight:800;font-size:24px;color:#231F20;margin:0 0 10px">Request received.</h2>
+          <h2 style="font-family:'Albert Sans',sans-serif;font-weight:800;font-size:24px;color:#231F20;margin:0 0 10px">Request received.</h2>
           <p style="font-size:15.5px;line-height:1.6;color:rgba(35,31,32,0.65);margin:0 auto 6px;max-width:360px">We'll confirm your session for <strong style="color:#231F20">{{ summary }}</strong> by email shortly.</p>
           <p style="font-size:13.5px;color:rgba(35,31,32,0.6);margin:18px 0 0">A calendar invite and short pre-call form will follow.</p>
         </div>
       </sc-if>
       <sc-if value="{{ notBooked }}" hint-placeholder-val="{{ true }}">
         <div>
-          <div style="font-family:'Open Sauce One',sans-serif;font-weight:700;font-size:14px;color:#231F20;margin-bottom:14px">1 · Choose a day</div>
+          <div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:14px;color:#231F20;margin-bottom:14px">1 · Choose a day</div>
           <div class="mq-grid-5" style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:26px">
             <sc-for list="{{ days }}" as="d" hint-placeholder-count="5">
               <button onClick="{{ d.pick }}" style="display:flex;flex-direction:column;align-items:center;gap:3px;padding:12px 4px;border-radius:12px;cursor:pointer;border:1px solid {{ d.border }};background:{{ d.bg }}">
-                <span style="font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:{{ d.sub }}">{{ d.dow }}</span>
-                <span style="font-family:'Open Sauce One',sans-serif;font-weight:700;font-size:18px;color:{{ d.fg }}">{{ d.num }}</span>
+                <span style="font-family:'Albert Sans',sans-serif;font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:{{ d.sub }}">{{ d.dow }}</span>
+                <span style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:18px;color:{{ d.fg }}">{{ d.num }}</span>
                 <span style="font-size:10.5px;color:{{ d.sub }}">{{ d.mon }}</span>
               </button>
             </sc-for>
           </div>
 
-          <div style="font-family:'Open Sauce One',sans-serif;font-weight:700;font-size:14px;color:#231F20;margin-bottom:14px">2 · Choose a time <span style="font-weight:400;color:rgba(35,31,32,0.6);font-family:'Hanken Grotesk'">(AEST)</span></div>
+          <div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:14px;color:#231F20;margin-bottom:14px">2 · Choose a time <span style="font-weight:400;color:rgba(35,31,32,0.6);font-family:'Albert Sans'">(AEST)</span></div>
           <div class="mq-grid-2" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:26px">
             <sc-for list="{{ times }}" as="t" hint-placeholder-count="8">
-              <button onClick="{{ t.pick }}" style="padding:11px 4px;border-radius:10px;cursor:pointer;font-family:'Space Mono',monospace;font-size:13px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+              <button onClick="{{ t.pick }}" style="padding:11px 4px;border-radius:10px;cursor:pointer;font-family:'Albert Sans',sans-serif;font-size:13px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
             </sc-for>
           </div>
 
-          <div style="font-family:'Open Sauce One',sans-serif;font-weight:700;font-size:14px;color:#231F20;margin-bottom:14px">3 · Your details</div>
+          <div style="font-family:'Albert Sans',sans-serif;font-weight:700;font-size:14px;color:#231F20;margin-bottom:14px">3 · Your details</div>
           <div style="display:flex;flex-direction:column;gap:12px">
             <input value="{{ name }}" onInput="{{ setName }}" placeholder="Full name" style="width:100%;background:#F2F2F2;border:1px solid {{ nameBorder }};border-radius:11px;padding:13px 15px;font-size:15px;color:#231F20;outline:none">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
@@ -130,7 +130,7 @@ html,body{ overflow-x:hidden; }
             <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
               <div style="font-size:13px;color:#ffb4ad;background:rgba(192,57,43,0.14);border:1px solid rgba(192,57,43,0.35);border-radius:10px;padding:10px 13px">Pick a day &amp; time and add your name, a valid email and company.</div>
             </sc-if>
-            <button onClick="{{ submit }}" style="background:#B4D9F3;color:#231F20;font-family:'Open Sauce One',sans-serif;font-weight:600;font-size:16px;padding:15px;border-radius:999px;border:none;cursor:pointer;width:100%;margin-top:4px" style-hover="background:#B4D9F3">Request this session →</button>
+            <button onClick="{{ submit }}" style="background:#B4D9F3;color:#231F20;font-family:'Albert Sans',sans-serif;font-weight:600;font-size:16px;padding:15px;border-radius:999px;border:none;cursor:pointer;width:100%;margin-top:4px" style-hover="background:#B4D9F3">Request this session →</button>
             <p style="margin:0;text-align:center;font-size:12px;color:rgba(35,31,32,0.6)">We'll confirm by email. Times shown are indicative.</p>
           </div>
         </div>
@@ -145,10 +145,10 @@ html,body{ overflow-x:hidden; }
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><img src="logo.png" style="height:48px;opacity:0.85"></div>
         <p style="margin:0 0 18px;font-size:14px;line-height:1.6;color:rgba(35,31,32,0.6);max-width:320px">Reward, recognition and relationship programs that retain key people, motivate performance and strengthen commercial relationships.</p>
-        <a href="Book-a-Call.html" style="display:inline-flex;align-items:center;gap:8px;background:#F2F2F2;border:1px solid rgba(35,31,32,0.1);color:#231F20;font-family:'Open Sauce One',sans-serif;font-weight:600;font-size:14px;padding:11px 18px;border-radius:999px" style-hover="border-color:#231F20">Book a call →</a>
+        <a href="Book-a-Call.html" style="display:inline-flex;align-items:center;gap:8px;background:#F2F2F2;border:1px solid rgba(35,31,32,0.1);color:#231F20;font-family:'Albert Sans',sans-serif;font-weight:600;font-size:14px;padding:11px 18px;border-radius:999px" style-hover="border-color:#231F20">Book a call →</a>
       </div>
       <div>
-        <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(35,31,32,0.6);margin-bottom:16px">Company</div>
+        <div style="font-family:'Albert Sans',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(35,31,32,0.6);margin-bottom:16px">Company</div>
         <div style="display:flex;flex-direction:column;gap:11px">
           <a href="index.html#what" style="font-size:14px;color:rgba(35,31,32,0.65)" style-hover="color:#231F20">What we do</a>
           <a href="index.html#process" style="font-size:14px;color:rgba(35,31,32,0.65)" style-hover="color:#231F20">Process</a>
@@ -157,7 +157,7 @@ html,body{ overflow-x:hidden; }
         </div>
       </div>
       <div>
-        <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(35,31,32,0.6);margin-bottom:16px">Resources</div>
+        <div style="font-family:'Albert Sans',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(35,31,32,0.6);margin-bottom:16px">Resources</div>
         <div style="display:flex;flex-direction:column;gap:11px">
           <a href="Insights.html" style="font-size:14px;color:rgba(35,31,32,0.65)" style-hover="color:#231F20">Insights</a>
           <a href="Blog.html" style="font-size:14px;color:rgba(35,31,32,0.65)" style-hover="color:#231F20">Blog</a>
@@ -166,7 +166,7 @@ html,body{ overflow-x:hidden; }
         </div>
       </div>
       <div>
-        <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(35,31,32,0.6);margin-bottom:16px">Get in touch</div>
+        <div style="font-family:'Albert Sans',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(35,31,32,0.6);margin-bottom:16px">Get in touch</div>
         <div style="display:flex;flex-direction:column;gap:11px">
           <a href="Contact.html" style="font-size:14px;color:rgba(35,31,32,0.65)" style-hover="color:#231F20">Contact</a>
           <a href="mailto:contact@mcincentives.com.au" style="font-size:14px;color:rgba(35,31,32,0.65)" style-hover="color:#231F20">contact@mcincentives.com.au</a>
@@ -176,7 +176,7 @@ html,body{ overflow-x:hidden; }
     </div>
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px">
       <span style="font-size:13px;color:rgba(35,31,32,0.6)">© 2026 MC Incentives. All rights reserved.</span>
-      <span style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(35,31,32,0.6)">Reward · Recognition · Relationships</span>
+      <span style="font-family:'Albert Sans',sans-serif;font-size:12px;color:rgba(35,31,32,0.6)">Reward · Recognition · Relationships</span>
     </div>
   </div>
 </footer>
