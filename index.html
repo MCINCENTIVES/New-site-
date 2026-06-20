@@ -185,18 +185,16 @@ html,body{ overflow-x:hidden; }
 <section style="position:relative;height:100vh;min-height:640px;overflow:hidden;background:#0a1a10">
 
   <!-- Full-bleed background image -->
-  <img src="hero6.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+  <img src="hero6.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
 
-  <!-- Dark overlay -->
-  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,10,0.82) 0%,rgba(5,15,10,0.35) 50%,rgba(5,15,10,0.15) 100%)"></div>
+  <!-- Dark overlay — lighter so image stays crisp -->
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,15,10,0.75) 0%,rgba(5,15,10,0.22) 45%,rgba(5,15,10,0.04) 100%)"></div>
 
   <!-- Oversized brand watermark -->
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;font-family:'Open Sauce One',sans-serif;font-weight:900;font-size:clamp(80px,14vw,200px);letter-spacing:-0.04em;color:rgba(255,255,255,0.09);pointer-events:none;user-select:none;line-height:1">MC INCENTIVES</div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;font-family:'Open Sauce One',sans-serif;font-weight:900;font-size:clamp(80px,14vw,200px);letter-spacing:-0.04em;color:rgba(255,255,255,0.08);pointer-events:none;user-select:none;line-height:1">MC INCENTIVES</div>
 
-  <!-- Top nav spacer (header is sticky above) -->
-
-  <!-- Bottom content -->
-  <div style="position:absolute;bottom:12%;left:0;right:0;padding:0 36px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
+  <!-- Content — vertically centred -->
+  <div style="position:absolute;top:50%;left:0;right:0;transform:translateY(-10%);padding:0 36px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
 
     <!-- Left: eyebrow + headline + CTAs -->
     <div style="max-width:620px">
@@ -206,20 +204,20 @@ html,body{ overflow-x:hidden; }
       </div>
       <h1 style="font-family:'Open Sauce One',sans-serif;font-weight:900;font-size:clamp(38px,5.5vw,78px);line-height:0.95;letter-spacing:-0.04em;color:#ffffff;margin:0 0 28px">Reward programs<br>your people<br>actually value</h1>
       <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <a href="Book-a-Call.html" style="display:inline-flex;align-items:center;gap:8px;background:#034938;color:#F2EDE4;font-family:'Open Sauce One',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:999px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">Book a strategy session <span style="background:#F2EDE4;color:#034938;border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:13px">&#x2192;</span></a>
+        <a href="Book-a-Call.html" style="display:inline-flex;align-items:center;gap:8px;background:#034938;color:#F2EDE4;font-family:'Open Sauce One',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:999px;text-decoration:none">Book a strategy session <span style="background:#F2EDE4;color:#034938;border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:13px">&#x2192;</span></a>
         <a href="Packages.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.45);color:#ffffff;font-family:'Open Sauce One',sans-serif;font-weight:600;font-size:14px;padding:13px 28px;border-radius:999px;text-decoration:none">See packages</a>
       </div>
     </div>
 
-    <!-- Right: stat cards -->
-    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end">
-      <div style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);border-radius:16px;padding:20px 22px;min-width:160px;backdrop-filter:blur(12px)">
-        <div style="font-family:'Open Sauce One',sans-serif;font-weight:900;font-size:28px;color:#ffffff;line-height:1;margin-bottom:6px">$3K</div>
-        <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;color:rgba(255,255,255,0.6);text-transform:uppercase;line-height:1.4">Audit starts from<br>$3,000 + GST</div>
+    <!-- Right: stat cards — solid white like reference -->
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
+      <div style="background:#ffffff;border-radius:20px;padding:22px 26px;min-width:170px;box-shadow:0 8px 32px rgba(0,0,0,0.22)">
+        <div style="font-family:'Open Sauce One',sans-serif;font-weight:900;font-size:32px;color:#231F20;line-height:1;margin-bottom:8px">$3K</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;color:rgba(35,31,32,0.55);text-transform:uppercase;line-height:1.5">Audit starts from<br>$3,000 + GST</div>
       </div>
-      <div style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);border-radius:16px;padding:20px 22px;min-width:160px;backdrop-filter:blur(12px)">
-        <div style="font-family:'Open Sauce One',sans-serif;font-weight:900;font-size:28px;color:#ffffff;line-height:1;margin-bottom:6px">100%</div>
-        <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;color:rgba(255,255,255,0.6);text-transform:uppercase;line-height:1.4">Audit fee credited<br>to your program</div>
+      <div style="background:#ffffff;border-radius:20px;padding:22px 26px;min-width:170px;box-shadow:0 8px 32px rgba(0,0,0,0.22)">
+        <div style="font-family:'Open Sauce One',sans-serif;font-weight:900;font-size:32px;color:#231F20;line-height:1;margin-bottom:8px">100%</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;color:rgba(35,31,32,0.55);text-transform:uppercase;line-height:1.5">Audit fee credited<br>to your program</div>
       </div>
     </div>
 
