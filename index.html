@@ -21,6 +21,7 @@
   section{ padding-top:54px !important; padding-bottom:54px !important; }
   [style*="grid-template-columns"]{ grid-template-columns:1fr !important; }
   section [style*="position: sticky"], section [style*="position:sticky"]{ position:static !important; top:auto !important; }
+  #what-scroll-outer [style*="position:sticky"]{ position:sticky !important; top:0 !important; }
   .mq-hstrip{ overflow-x:auto !important; justify-content:flex-start !important; padding-bottom:10px !important; }
   .mq-hstrip > div{ transform:none !important; }
   .mq-col{ flex-direction:column !important; gap:14px !important; }
@@ -350,18 +351,34 @@ html,body{ overflow-x:hidden; }
     var hint = document.getElementById('what-hint');
     if(!outer||!track) return;
 
+    // Find the actual scroll container (handles DC runtime wrapping page in overflow:auto)
+    function getScrollParent(el){
+      var parent = el.parentElement;
+      while(parent){
+        var st = window.getComputedStyle(parent);
+        var ov = st.overflow + st.overflowY;
+        if(/auto|scroll/.test(ov) && parent.scrollHeight > parent.clientHeight){
+          return parent;
+        }
+        parent = parent.parentElement;
+      }
+      return window;
+    }
+
+    function getScrollTop(scroller){
+      return scroller === window ? (window.pageYOffset || document.documentElement.scrollTop) : scroller.scrollTop;
+    }
+
     function update(){
       var rect = outer.getBoundingClientRect();
       var outerH = outer.offsetHeight;
       var vh = window.innerHeight;
-      // progress 0→1 as section scrolls
       var scrolled = -rect.top;
       var scrollable = outerH - vh;
       var pct = Math.max(0, Math.min(1, scrolled / scrollable));
 
-      // total slide distance = track width - viewport width + padding
       var trackW = track.scrollWidth;
-      var viewW = window.innerWidth - 120; // 60px padding each side
+      var viewW = window.innerWidth - 120;
       var maxSlide = Math.max(0, trackW - viewW);
 
       track.style.transform = 'translateX(-' + (pct * maxSlide) + 'px)';
@@ -369,7 +386,12 @@ html,body{ overflow-x:hidden; }
       if(hint) hint.style.opacity = pct > 0.05 ? '0' : '1';
     }
 
+    // Attach to both window and any scroll parent
+    var scroller = getScrollParent(outer);
     window.addEventListener('scroll', update, {passive:true});
+    if(scroller !== window){
+      scroller.addEventListener('scroll', update, {passive:true});
+    }
     update();
   })();
   </script>
